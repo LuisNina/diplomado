@@ -1,5 +1,6 @@
 export class Sucursal {
-    id: number;    
+    _id: string;
+    code: string;        
     name: string;
     description: string;
     phone: number;

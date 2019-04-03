@@ -25,7 +25,7 @@ export class SucursalListComponent implements OnInit {
 
    // Delete sucursal
    deleteSucursal(id) {
-    if (window.confirm('Are you sure, you want to delete?')){
+    if (window.confirm('Are you sure, you want to delete? - ' + id)){
       this.restApi.deleteSucursal(id).subscribe(data => {
         this.loadSucursal()
       })

@@ -9,7 +9,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class RestApiService {
 
   // Define API
-  apiURL = 'http://localhost:3000';
+  apiURL = 'https://pizzasucursal.azurewebsites.net/api/pizza_branch';
 
   constructor( private http: HttpClient ) { }
 
@@ -22,7 +22,7 @@ export class RestApiService {
 
   // HttpClient API get() method => Fetch Sucursal list
   getSucursales(): Observable<Sucursal> {
-    return this.http.get<Sucursal>(this.apiURL + '/sucursal')
+    return this.http.get<Sucursal>(this.apiURL)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -31,7 +31,7 @@ export class RestApiService {
 
   // HttpClient API get() method => Fetch Sucursal
   getSucursal(id): Observable<Sucursal> {
-    return this.http.get<Sucursal>(this.apiURL + '/sucursal/' + id)
+    return this.http.get<Sucursal>(this.apiURL)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -40,7 +40,7 @@ export class RestApiService {
 
   // HttpClient API post() method => Create Sucursal
   createSucursal(sucursal): Observable<Sucursal> {
-    return this.http.post<Sucursal>(this.apiURL + '/sucursal', JSON.stringify(sucursal), this.httpOptions)
+    return this.http.post<Sucursal>(this.apiURL, JSON.stringify(sucursal), this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -49,7 +49,7 @@ export class RestApiService {
 
   // HttpClient API put() method => Update Sucursal
   updateSucursal(id, sucursal): Observable<Sucursal> {
-    return this.http.put<Sucursal>(this.apiURL + '/sucursal/' + id, JSON.stringify(sucursal), this.httpOptions)
+    return this.http.put<Sucursal>(this.apiURL, JSON.stringify(sucursal), this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -58,7 +58,7 @@ export class RestApiService {
 
   // HttpClient API delete() method => Delete Sucursal
   deleteSucursal(id){
-    return this.http.delete<Sucursal>(this.apiURL + '/sucursal/' + id, this.httpOptions)
+    return this.http.delete<Sucursal>(this.apiURL + '/' + id , this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.handleError)

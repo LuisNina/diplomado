@@ -9,7 +9,7 @@ import { RestApiService } from "../shared/rest-api.service";
 })
 export class SucursalCreateComponent implements OnInit {
 
-  @Input() sucursalDetails = { name: '', description: '', phone: '', mobile: '', manager:'' }
+  @Input() sucursalDetails = { codigo: 'SUC-',name: '', description: '', phone: '', mobile: '', manager:'' }
   constructor(
     public restApi: RestApiService, 
     public router: Router
