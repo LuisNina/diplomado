@@ -6,7 +6,7 @@ var express         = require("express"),
 
 // Connection to DB
 
-mongoose.connect('mongodb://40.113.236.81:27017/pizzas', function(err, res) {
+mongoose.connect('mongodb://104.43.133.42:27017/pizzas', function(err, res) {
   if(err) {
     console.log('ERROR: Connected to Database');
   } else{

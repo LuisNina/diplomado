@@ -9,7 +9,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class RestApiService {
 
   // Define API
-  apiURL = 'https://pizzasucursal-v1.azurewebsites.net/api/pizza_branch';
+  apiURL = 'https://pizzasucursal.azurewebsites.net/api/pizza_branch';
   //apiURL = 'http://localhost:3000';
 
   constructor( private http: HttpClient ) { }

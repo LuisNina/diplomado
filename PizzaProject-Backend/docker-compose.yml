@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: pizza.azurecr.io/sucursal_pizza
+    image: containerpizza.azurecr.io/sucursal_pizza
     restart: always
     build: .
     ports:
