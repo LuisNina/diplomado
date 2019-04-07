@@ -11,13 +11,15 @@ import { SucursalListComponent } from './sucursal-list/sucursal-list.component';
 import { FormsModule } from '@angular/forms';
 // HttpClient module for RESTful API
 import { HttpClientModule } from '@angular/common/http';
+import { PedidosComponent } from './pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SucursalCreateComponent,
     SucursalEditComponent,
-    SucursalListComponent
+    SucursalListComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,

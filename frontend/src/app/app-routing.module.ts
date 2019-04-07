@@ -1,3 +1,4 @@
+import { PedidosComponent } from './pedidos/pedidos.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SucursalEditComponent } from './sucursal-edit/sucursal-edit.component';
@@ -8,7 +9,9 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'create-sucursal' },
   { path: 'create-sucursal', component: SucursalCreateComponent },
   { path: 'sucursal-list', component: SucursalListComponent },
-  { path: 'sucursal-edit/:id', component: SucursalEditComponent } 
+  { path: 'sucursal-edit/:id', component: SucursalEditComponent },
+  { path : 'pedidos', component: PedidosComponent}
+   
 ];
 
 @NgModule({

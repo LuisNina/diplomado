@@ -9,7 +9,8 @@ import { retry, catchError } from 'rxjs/operators';
 export class RestApiService {
 
   // Define API
-  apiURL = 'https://pizzasucursal.azurewebsites.net/api/pizza_branch';
+  apiURL = 'https://pizzasucursal-v1.azurewebsites.net/api/pizza_branch';
+  //apiURL = 'http://localhost:3000';
 
   constructor( private http: HttpClient ) { }
 
@@ -58,7 +59,7 @@ export class RestApiService {
 
   // HttpClient API delete() method => Delete Sucursal
   deleteSucursal(id){
-    return this.http.delete<Sucursal>(this.apiURL + '/' + id , this.httpOptions)
+    return this.http.delete<Sucursal>(this.apiURL + '/' + id, this.httpOptions)  
     .pipe(
       retry(1),
       catchError(this.handleError)

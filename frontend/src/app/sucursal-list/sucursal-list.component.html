@@ -32,11 +32,9 @@
             <td>{{sucursal.mobile}}</td>
             <td>{{sucursal.manager}}</td>
 
-            <td>
-                <!--<span class="edit" routerLink="/sucursal-edit/{{sucursal._id}}">Edit-</span>-->
-                <span class="delete"  (click)="deleteSucursal(sucursal._id)"> <i class="fa fa-trash-o"></i> </span> 
-                
-                
+            <td> 
+                <button class="btn btn-primary btn-sm" (click)="deleteSucursal(sucursal._id)">Delete</button>&nbsp;
+                <button type="button" class="btn btn-primary btn-sm" routerLink="/pedidos">Order List</button>
             </td>
           </tr>
         </tbody>

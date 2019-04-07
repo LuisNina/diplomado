@@ -1,0 +1,25 @@
+
+<div class="container custom-container-2" >
+  <h3 class="mb-3 text-center">Orders List </h3>
+  <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Description</th>
+            <th scope="col">Quantity</th>
+            <th scope="col"> type Order</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let lista of listas$">
+            <td>{{lista.orderId}}</td>    
+            <td>{{lista.items[0].description}}</td>
+            <td>{{lista.items[0].quantity}}</td>
+            <td>{{lista.items[0].itemCode}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+</div>
+
